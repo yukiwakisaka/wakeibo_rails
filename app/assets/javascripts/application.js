@@ -13,4 +13,25 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require highcharts/highcharts
+//= require highcharts/highcharts-more
+//= require bootstrap-sprockets
 //= require_tree .
+
+$(document).on('page:change', function(){$('body').fadeIn("slow");});
+
+function addFigure(str) {
+    var num = new String(str).replace(/,/g, "");
+    while(num != (num = num.replace(/^(-?\d+)(\d{3})/, "$1,$2")));
+    return num;
+}
+
+function balanceFormat(str) {
+    var pm = str > 0;
+    var num = addFigure(str);
+
+    if (pm)
+        return "<b>"+num+"</b>";
+    else
+        return "<span style=\"color:#B00100\">"+num+"</span>";
+}

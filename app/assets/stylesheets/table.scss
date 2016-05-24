@@ -1,0 +1,32 @@
+
+.table-block{
+  width: inherit;
+  padding: 0 15px;
+}
+
+.table-scroll{
+  thead {
+    width: inherit;
+  }
+  tbody{
+    height: 230px;
+    overflow-y: auto;
+    width: inherit;
+  }
+  thead, tbody, tr, td, th {
+    display: block;
+  }
+  tbody td, thead > tr> th {
+    float: left;
+    //border-bottom-width: 0;
+  }
+}
+
+.table-scroll-border{
+  tbody td, thead > tr > th {
+    border-left: 1px solid;
+    &:last-child{
+      border-right: 1px solid;
+    }
+  }
+}
