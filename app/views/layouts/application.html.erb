@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Wakeibo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+　	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons//apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicons//apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicons//apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons//apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicons//apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicons//apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicons//apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons//apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- end favicon -->
+	<!-- reset css -->
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+	<title>Wakeibo</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
-<body>
-<h1>テストコミット用h1</h1>
-<p>テストその2</p>
-<%= yield %>
+<body class="wrap">
+	<header class="header cf">
+		<p class="title">wakeibo</p>
+		<a class="primary_btn header_btn" href="FIXME">新規登録</a>
+	</header>
+	<div class="content_wrap cf">
+		<img class="index_img" src="img/wakeibo_icon.png">
+		<!-- ログイン処理 -->
+		
+		<%= yield %>
+
+		<section class="top_form">
+			<p>ログインメールアドレス</p>
+			<input class="top_input" type="email" name="email" size="30" maxlength="40">
+			<p class="top_form_text">パスワード</p>
+			<input class="top_input" type="password" name="pass" size="10" maxlength="8">
+			<input class="top_input" type="submit" value="送信する">
+		</section>
+		<!-- ログイン処理ここまで -->
+	</div>	
+	
+	<footer class="footer">
+		<p>ふった</p>
+	</footer>
+
 
 </body>
 </html>
